@@ -1,0 +1,12 @@
+{
+  "extends": "@hover/javascript/tsconfig",
+  "compilerOptions": {
+    "allowJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "target": "ESNext"
+  }
+}

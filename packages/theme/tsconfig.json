@@ -1,0 +1,8 @@
+{
+  "extends": ["../../tsconfig.base.json", "astro/tsconfigs/strictest"],
+  "include": ["src", "index.ts"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": false,
+  }
+}

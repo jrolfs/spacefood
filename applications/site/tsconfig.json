@@ -1,0 +1,10 @@
+{
+  "extends": ["../../tsconfig.base.json", "astro/tsconfigs/strictest"],
+  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./app/*"]
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "extends": "./tsconfig.base.json",
+  "include": [
+    "**/*.config.cjs",
+    "**/*.config.js",
+    "**/*.config.ts",
+    "**/.eslintrc*.cjs",
+    "**/.storybook/**/*.js",
+    "**/.storybook/**/*.ts",
+    "**/.storybook/**/*.tsx",
+    "**/bin/*.cjs",
+    "**/bin/*.cjs",
+    "**/bin/*.js",
+    "**/types/**/*.ts"
+  ]
+}

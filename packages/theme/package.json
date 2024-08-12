@@ -1,0 +1,35 @@
+{
+  "name": "@spacefood/theme",
+  "version": "0.1.0",
+  "repository": "git+ssh://github.com/jrolfs/spacefood/tree/master/packages/theme",
+  "license": "MIT",
+  "keywords": [
+    "astro",
+    "withastro",
+    "astro-integration"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "run-p 'build:*'",
+    "build:types": "tsc",
+    "commit": "hover-scripts commit",
+    "format": "hover-scripts format",
+    "lint": "hover-scripts lint",
+    "pre-commit": "hover-scripts pre-commit",
+    "start": "run-p 'start:*'",
+    "start:types": "tsc -b -w --preserveWatchOutput"
+  },
+  "peerDependencies": {
+    "astro": "^4.13.1"
+  },
+  "dependencies": {
+    "astro-theme-provider": "^0.6.1"
+  },
+  "devDependencies": {
+    "@hover/javascript": "8.0.0-eslint8.4",
+    "astro": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "tsup": "^8.0.2",
+    "typescript": "^5.3.3"
+  }
+}

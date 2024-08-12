@@ -1,0 +1,56 @@
+{
+  "name": "space.food",
+  "private": true,
+  "type": "module",
+  "repository": "git@gitlab.com:jrolfs/spacefood.git",
+  "author": "Jamie Rolfs <jamie@rolfs.sh>",
+  "license": "MIT",
+  "scripts": {
+    "build": "turbo build",
+    "build:packages": "echo '🚧 IMPLEMENT ME PLS'",
+    "build:types": "turbo build:types",
+    "clean": "turbo run clean",
+    "commit": "hover-scripts commit",
+    "commit:install": "node bin/commit:install.cjs",
+    "format": "turbo format",
+    "lint": "turbo lint lint:root",
+    "lint:root": "hover-scripts lint *.{js,cjs,ts}",
+    "packages:check": "manypkg check",
+    "packages:fix": "manypkg fix",
+    "packages:publish": "changeset publish",
+    "packages:version": "changeset version && yarn install --no-immutable",
+    "postinstall": "run-s commit:install packages:check",
+    "pre-commit": "hover-scripts pre-commit",
+    "release": "run-s build:packages packages:publish",
+    "rp": "manypkg run",
+    "start": "run-p 'start:*'",
+    "start:site": "yarn workspace @spacefood/site run start",
+    "start:types": "yarn workspaces foreach -v run start:types",
+    "test": "turbo run test",
+    "update:node": "node bin/update:node.js",
+    "validate": "turbo build:types lint test"
+  },
+  "dependencies": {
+    "@changesets/cli": "^2.26.1",
+    "@hover/javascript": "8.0.0-eslint8.4",
+    "@manypkg/cli": "^0.21.4",
+    "@types/eslint": "^8.4.10",
+    "husky": "^8.0.3",
+    "npm-run-all": "^4.1.5",
+    "turbo": "^2.0.5",
+    "typescript": "^5.3.3"
+  },
+  "resolutions": {
+    "@typescript-eslint/eslint-plugin": "^8.1.0",
+    "@typescript-eslint/parser": "^8.1.0",
+    "typescript": "^5.3.3"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "workspaces": [
+    "applications/*",
+    "packages/*"
+  ],
+  "packageManager": "yarn@3.3.1"
+}

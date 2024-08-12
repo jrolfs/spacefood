@@ -1,0 +1,31 @@
+{
+  "name": "@spacefood/site",
+  "version": "0.1.0",
+  "private": true,
+  "repository": "git+ssh://github.com/jrolfs/spacefood/tree/master/applications/site",
+  "license": "MIT",
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "build": "run-p 'build:*'",
+    "build:source": "astro build",
+    "build:source:preview": "astro preview",
+    "build:types": "tsc",
+    "commit": "hover-scripts commit",
+    "format": "hover-scripts format",
+    "lint": "hover-scripts lint",
+    "pre-commit": "hover-scripts pre-commit",
+    "start": "run-p 'start:*'",
+    "start:source": "astro dev",
+    "start:types": "tsc -b -w --preserveWatchOutput"
+  },
+  "dependencies": {
+    "@spacefood/theme": "workspace:^",
+    "astro": "^4.13.1"
+  },
+  "devDependencies": {
+    "@hover/javascript": "8.0.0-eslint8.4",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.3.3"
+  }
+}

@@ -1,0 +1,6 @@
+extends: ../../.eslintrc.cjs
+overrides:
+  - files:
+      - 'index.ts'
+    rules:
+      import/no-default-export: off

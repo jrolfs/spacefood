@@ -1,0 +1,48 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "tasks": {
+    "build": {
+      "inputs": ["$TURBO_DEFAULT$", ".env*"],
+      "dependsOn": ["^build"],
+      "outputs": ["build/**", "dist/**"]
+    },
+    "build:types": {
+      "dependsOn": ["^build:types"]
+    },
+    "clean": {
+      "cache": false
+    },
+    "format": {},
+    "lint": {},
+    "//#lint:root": {},
+    "pre-commit": {
+      "inputs": [
+        "**/*.js",
+        "**/*.jsx",
+        "**/*.json",
+        "**/*.json5",
+        "**/*.yml",
+        "**/*.yaml",
+        "**/*.css",
+        "**/*.less",
+        "**/*.scss",
+        "**/*.ts",
+        "**/*.tsx",
+        "**/*.md",
+        "**/*.graphql",
+        "**/*.mdx",
+        "**/*.vue"
+      ],
+      "outputs": []
+    },
+    "start": {
+      "dependsOn": ["^start"],
+      "cache": false,
+      "persistent": true
+    },
+    "test": {
+      "outputs": ["coverage/**"],
+      "dependsOn": []
+    }
+  }
+}
