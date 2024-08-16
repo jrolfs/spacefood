@@ -1,0 +1,12 @@
+extends: ../../.eslintrc.cjs
+rules:
+  import/no-default-export: off
+overrides:
+  - files:
+      - 'src/plugin.ts'
+    rules:
+      no-param-reassign: off
+  - files:
+      - 'src/trace.ts'
+    rules:
+      no-console: off
